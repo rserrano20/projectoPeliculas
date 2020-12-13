@@ -1,0 +1,33 @@
+/* Ubisoft Sans Regular */
+@font-face {
+    font-family: 'Ubisoft Sans Regular';
+    font-style: normal;
+    src: url('fonts/UbisoftSans-Regular.woff2') format('woff2'),
+         url('fonts/UbisoftSans-Regular.woff') format('woff'),
+         url('fonts/UbisoftSans-Regular.otf') format('opentype');
+}
+
+/* Ubisoft Sans Bold */
+@font-face {
+    font-family: 'Ubisoft Sans Bold';
+    font-style: bold;
+    src: url('fonts/UbisoftSans-Bold.woff2') format('woff2'),
+         url('fonts/UbisoftSans-Bold.woff') format('woff'),
+         url('fonts/UbisoftSans-Bold.ttf') format('truetype');
+}
+
+/* Noto Sans CJK KR Bold */
+@font-face {
+    font-family: 'Noto Sans CJK KR Bold';
+    font-style: bold;
+    src: url('fonts/noto-sans-kr-v8-latin_korean-700.woff2') format('woff2'),
+         url('fonts/noto-sans-kr-v8-latin_korean-700.woff') format('woff');
+}
+
+/* Noto Sans CJK KR Regular */
+@font-face {
+    font-family: 'Noto Sans CJK KR Regular';
+    font-style: normal;
+    src: url('fonts/noto-sans-kr-v8-latin_korean-regular.woff2') format('woff2'),
+         url('fonts/noto-sans-kr-v8-latin_korean-regular.woff') format('woff');
+}

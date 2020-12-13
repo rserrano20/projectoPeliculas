@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--HEAD-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nicolas Bertini Arganaras - Franco Olmi - Ignacio Salas -  Raul de Serranos - Rosario Serrano">
+    <meta name="description" content="Tienda Online de VideoJuegos">
+    <meta name="keywords" content="tienda, online, videojuegos, store, juegos, fps, rpg, accion, aventura, carreras, estrategia, mmorpg, store, games, online, offline, e-commerce, trailers, lanzamientos, avances, pc, playstation, xbox, nintendo, mobiles" >
+    <title>START GAMER</title> 
+    <script src="https://kit.fontawesome.com/8636d8c12d.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Ropa+Sans&display=swap" rel="stylesheet">
+</head>
+<!--BODY-->
+<body class="darkgrey">
+    <header>
+        <!--NAVBAR-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top black white-t" id="tipoNav">
+            <div class="container">
+                <a class="navbar-brand efectoimg" href="index.html">
+                    <img src="img/logo3.png" alt="logo startGamer" class="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto list-unstyled">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">INICIO |</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">CONTACTO |</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="acerca.html">ACERCA DE |</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link efectoimg" href="registro.html">REGISTRARSE
+                                <i class="fas fa-user-edit ml-2"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link efectoimg" href="login.html"><strong>INICIAR SESION </strong>
+                                <i class="fas fa-user-circle fa-1x"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+<!--SECCION PRINCIPAL-->
+    <section class="container formulario">
+        <h1 class="display-4 text-center white-t"><strong>Administrar Juegos</strong></h1>
+        <hr>
+            <section class="row justify-content-center">
+                <div class="col-10">
+                </div>
+                <div class="col-2">
+                    <img src="" alt="" class="w-100">
+                </div>
+            </section>
+            <section>
+                <article class="row my-4">
+                    <div class="col-10">
+                        <h3 class="white-t">Juegos Disponibles</h3>
+                    </div>
+                    <div class="col-2 text-right">
+                        <button class="btn btn-outline-danger" data-toggle="modal"
+                            data-target="#exampleModal">Agregar</button>
+                    </div>
+                </article>
+                <article>
+                    <table class="table  text-light text-center">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Codigo</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Categoria</th>
+                                <th scope="col">Descripcion</th>
+                                <th scope="col">Publicado</th>
+                                <th scope="col">Precio</th>
+                                <th scope="col">Opciones</th>
+                            </tr>
+                        </thead>
+                        <tbody  id="bodyJuego">
+                            
+                        </tbody>
+                    </table>
+                </article>
+            </section>
+    </section>
+    <section class="container formulario">
+        <h1 class="display-4 text-center white-t"><strong>Clientes Pendientes</strong></h1>
+        <hr>
+            <section class="row justify-content-center">
+                <div class="col-10">
+                </div>
+                <div class="col-2">
+                    <img src="" alt="" class="w-100">
+                </div>
+            </section>
+            <section>
+                <!-- <article class="row my-4">
+                    <div class="col-10 text-center">
+                        <h3>Tabla de Clientes</h3>
+                    </div>
+                    <div class="col-2 text-right">
+                        <button class="btn btn-outline-danger" data-toggle="modal"
+                            data-target="#exampleModal">Agregar</button>
+                    </div>
+                </article> -->
+                <article id="seccionCliente">
+                    <table class="table  text-light text-center">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Apellido</th>
+                                <th scope="col">Correo</th>
+                                <th scope="col">Estado</th>
+                                <th scope="col">Validar</th>
+                            </tr>
+                        </thead>
+                        <tbody  id="bodyCliente">
+                            
+                        </tbody>
+                    </table>
+                </article>
+            </section>
+    </section>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header ">
+                    <h5 class="modal-title" id="exampleModalLabel">Agregar un nuevo Juego</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form onsubmit="validarFormJuego(event)" id="formJuego">
+                        <div class="form-group">
+                            <label for="formGroupExampleInput">Codigo</label>
+                            <input type="text" class="form-control" id="codigo"
+                                placeholder="Ingrese un codigo">
+                            <div class="invalid-feedback">
+                                codigo incorrecto
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">Nombre</label>
+                            <input type="text" class="form-control" id="nombre"
+                                placeholder="WAR">
+                            <div class="invalid-feedback">
+                                Campo obligatorio
+                            </div>
+                        </div>
+                        <div class="form-group form-control">
+                            <label for="formGroupExampleInput2">Categoria</label>
+                            <select name="cars" id="categoria" type="text">
+                                <option value="volvo" type="text">Accion/Aventura</option>
+                                <option value="saab" type="text">Disparos</option>
+                                <option value="opel" type="text">Carreras</option>
+                                <option value="audi" type="text">Infantiles</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">Descripcion</label>
+                            <input type="text" class="form-control" id="descripcion"
+                                placeholder="Ingrese una Descripcion">
+                        </div>
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="publicado">
+                                <label class="form-check-label">
+                                    Publicado
+                                </label>
+                                
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">Precio</label>
+                            <input type="text" class="form-control" id="precio"
+                                placeholder="$240">
+                            <div class="invalid-feedback">
+                                Precio obligatorio
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">URL</label>
+                            <input class="form-control" id="url"
+                                placeholder="https://www.google.com">
+                            <div class="invalid-feedback">
+                                Campo obligatorio
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </form>
+                </div>
+                <div class="modal-footer bg-dark">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header ">
+                    <h5 class="modal-title" id="exampleModalLabel2">Agregar un nuevo cliente</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form onsubmit="" id="formGeneral">
+                        <div class="form-group">
+                            <label for="formGroupExampleInput">Nombre</label>
+                            <input type="text" class="form-control" id="n_cli"
+                                placeholder="Juan">
+                                <div class="invalid-feedback">
+                                    Debe ingresar un nombre
+                                </div>
+                                <div class="valid-feedback">
+                                    todo bien
+                                </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">Apellido</label>
+                            <input type="text" class="form-control" id="ape_cli"
+                                placeholder="Perez">
+                                <div class="invalid-feedback">
+                                    Debe ingresar tu apellido
+                                </div>
+                                <div class="valid-feedback">
+                                    todo bien
+                                </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">Contraseña</label>
+                            <input type="password" class="form-control" id="pass_cli"
+                                placeholder="">
+                                <div class="invalid-feedback">
+                                    Debe ingresar una contraseña
+                                </div>
+                                <div class="valid-feedback">
+                                    todo bien
+                                </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">Correo</label>
+                            <input type="text" class="form-control" id="email_cli"
+                                placeholder="Ingrese su  correo">
+                                <div class="invalid-feedback">
+                                    Debe ingresar un correo  valido
+                                </div>
+                                <div class="valid-feedback">
+                                </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </form>
+                </div>
+                <div class="modal-footer bg-dark">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--FOOTER-->
+<footer class="text-light black" >
+    <div class=" text-center py-1 black" >
+        
+            <article class="container black">
+                <div class="row">
+                    <div class="col-sm-12 col-md-4 black" >
+                        <a href="index.html" target="blank">
+                            <img class="mb-3 efectoimg" src="img/logo3.png" alt="logo startgamer" width="100px">
+                        </a>
+                        <br>
+                        <a href="error404.html" target="blank" class="mx-2">Privacidad</a>
+                        <a href="error404.html" target="blank" class="mx-2">Condiciones</a>
+                        <a href="error404.html" target="blank" class="mx-2">Contacto</a>
+
+                    </div>
+                    <div class="col-sm-12 col-md-4 ">
+                        <p><strong>Descarga la Aplicacion Movil:</strong></p>
+                        
+                        <a href="error404.html" target="blank">
+                            <img src="img/appstore.svg" alt="tienda de apple" id="app"
+                                class="efectoimg mx-2 pequeña"></a>
+
+                        <a href="error404.html" target="blank">
+                            <img src="img/playstore.svg" alt="playstore" id="app"
+                                class="efectoimg mx-2 pequeña"></a>
+                    </div>
+                    <div class="col-sm-12 col-md-4 ">
+                        <p><strong>Visita Nuestras Redes:</strong></p>
+                        <br>
+                        <br>
+                        <a class="mr-2" href="error404.html" target="_blank"><i
+                                class="fab fa-twitter-square fa-3x text-light efectoimg"></i></a>
+                        <a class="mr-2" href="error404.html" target="_blank"><i
+                                class="fab fa-facebook-square fa-3x text-light efectoimg"></i></a>
+                        <a class="mr-2" href="error404.html" target="_blank"><i
+                                class="fab fa-instagram-square fa-3x text-light efectoimg"></i></a>
+                        <a class="mr-1" href="error404.html" target="_blank"><i
+                                class="fab fa-whatsapp-square fa-3x text-light efectoimg"></i></a>
+
+                    </div>
+                </article>
+            </div>
+        </div>
+        <hr>
+        <div class="text-center text-muted" id="lightgrey-t">
+            <p><small>© Todos los Derechos Reservados - Grupo 3 - Comisión 7D</small></p>
+        </div>
+    </footer>
+</body>
+
+</html>

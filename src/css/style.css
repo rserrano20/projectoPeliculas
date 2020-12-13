@@ -1,0 +1,129 @@
+/*Slider*/
+.margensuperior {
+    margin-top: 100px;
+}
+
+/*Font*/
+body {
+    font-family: Roboto,sans-serif;
+    
+}
+
+body{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Ropa Sans', sans-serif;
+    
+}
+.app{
+    height: 50px;
+}
+
+
+/*Colores de fondo*/
+
+.black{
+    background-color: #050505;
+    
+}
+
+.orange{
+    background-color: #FE7B68;
+}
+
+.darkgrey{
+    background-color: #262626;
+}
+
+.lightgrey{
+    background-color: #C7C7C7;
+}
+
+.white{
+    background-color: #FFFFFF;
+}
+
+
+
+/*Colores de Texto*/
+
+.black-t{
+    color: #050505;
+}
+
+.orange-t{
+    color: #FE7B68;
+}
+
+.darkgrey{
+    color: #262626
+}
+
+.lightgrey-t{
+    color: #C7C7C7;
+}
+
+.white-t{
+    color: #FFFFFF;
+}
+
+/*Efectos mouse*/
+
+.efectoimg:hover{
+    transition: 150ms;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    filter: opacity(.9)
+}
+/* tamaño */
+img.pequeña{
+    width: 110px; height: 140px;
+  }
+
+  img.error{
+      image-rendering: pixelated;
+      width: 70%;
+  }
+
+/*CATALOGO JUEGOS*/
+.catalogo{
+    max-height: 400px;
+}
+
+body{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/* Estilos pagina loguin */
+
+ .fondologuin{
+    background-image: url("https://wallpaperaccess.com/full/264293.jpg");
+} 
+
+.boton{
+    width: 300px;
+}
+
+.logo{
+    height: 60px;
+}
+.formulario{
+    margin-top: 150px;
+    margin-bottom: 100px;
+}
+.titulologuin{
+    margin-bottom: 60px;
+}
+
+
+
+footer{
+    max-height: 18px;
+    margin: 0px;
+}
+
+.breadcrumb >.active {
+    color: black;
+ }
+
+
