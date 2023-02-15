@@ -1,0 +1,16 @@
+MarcarCruz(color){
+ Poner(color)
+  Mover(Norte)
+  Mover(Norte)
+  Poner(color)
+  Mover(Este)
+  Mover(Sur)
+  Poner(color)
+  Mover (Sur)
+  Mover(Este)
+  Poner(Color)
+  Mover(Norte)
+  Mover(Norte)
+  Poner(color)
+  
+}
